@@ -1,0 +1,55 @@
+.right-bg-color {
+  background-color: #086be1
+}
+.bg-indigo-600,
+.blue {
+  background-color: #086ae1
+}
+button .text-white {
+  color: #fff
+}
+.leading-normal {
+  color: #36454f
+}
+.footer-logo,
+.width {
+  width: 120px
+}
+h2 .text-white {
+  color: #000
+}
+.logo-width {
+  width: 100px
+}
+.mb-36 {
+  margin-bottom: 3rem
+}
+.h1-size {
+  font-size: 34px
+}
+.h3-size {
+  font-size: 16px
+}
+label {
+  font-size: 20px;
+  }
+button {
+  color: #ffffff;
+  background-color: #016adf;
+  font-size: 18px;
+  border: 1px solid #000;
+  padding: 15px;
+  width: 49%;
+}
+button:hover {
+	color: #2d63c8;
+	background-color: #ffffff;
+}
+.fieldgroup{
+	width: auto;
+}
+fieldset {
+  text-align: center;
+  padding: 10px 20px 18px 20px;
+}
+
