@@ -1,161 +1,181 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
     <title>The Infamous Survey | Save.Financial</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.cdnfonts.com/css/general-sans?styles=135312,135310,135313,135303" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto Slab">
     <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" src="fonts/css/fontawesome-all.min.css">    
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <script src="js/main.js"></script>
-    <!-- Flowbite docs: https://flowbite.com/docs -->
-    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
-    <script href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"></script>
     <style>
-
-        input { 
-            margin-top: 20px; 
-            margin-bottom: 20px; 
-        }
-
-        .yn-button {
-			color: #ffffff;
-			background-color: #016adf;
-			font-size: 18px;
-			border: 1px solid #000;
-			padding: 15px;
-            width: 49%;
-		}
-
-        .yn-button:hover {
-			color: #2d63c8;
-			background-color: #ffffff;
-		}
-    </style>
+      .card-style {
+        margin: 0px 0px 30px 1px;
+      }
+      .tabs-small {
+        line-height: 50px;
+      }
+      .card {
+        display: initial;
+        padding-bottom: 25px;
+      }
+      h2 .h2 {
+        font-family: "Raleway:300,400,700";
+        font-weight: 700;
+      }
+      .mb-36 {
+        margin-bottom: 28px;
+      }
+      .h3-size {
+        font-size: 13px;
+        padding-top: 9px;
+      }
+      .mr-2 {
+        font-size: 20px;
+      }
+      .content {
+        margin: 10px 15px 0px 15px;
+      }
+      .sub-light {
+        color: orange;
+        font-size: 15px;
+      }
+      .mr-2 {
+        font-size: 24px;
+      }
+      .content {
+        margin: 10px -12px 0px -13px;
+      }
+      hr.solid {
+        border-top: 3px solid #bbb;
+        opacity: 0.1;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+      }
+      hr {
+        margin: 30px;
+      }
+      .bg-highlight {
+        background-color: #086AE1 !important;
+      }
+    </style> 
 </head>
-<body class="antialiased bg-body text-body font-body">
+<body class="antialiased bg-body text-body font-body theme-light" data-highlight="highlight-red" data-gradient="body-default">
     <div class="">
         <div>
             <section class="py-16 xl:pb-56 bg-white overflow-hidden">
                 <div class="container px-4 mx-auto">
                     <div class="text-center max-w-md mx-auto">
                         <a class="mb-36 inline-block" href="#"><img src="images/Save-Financial-logos.png" alt="" class="logo-width"></a>
-                            <h2 class="mb-4 text-3xl md:text-7xl text-center font-bold font-heading tracking-px-n leading-tight h1-size">
+                            <h2>
                                 Complete Our Survey &amp; Let A.I. Do the Rest
                             </h2>
                             <p class="mb-12 font-medium text-gray-600 leading-normal h3-size">
                                 Answer the questions honestly and let our algorithm do all the work for you. Discover savings opportunities in moments.
                             </p>
                 <form>
-                    <label class="mr-2"><p>Do you own a home?</p>
-                    <input type="radio" name="inline-radio" value="option 1">
-                        <span class="ml-1 yn-button">Yes</span>
-                    </label>
-                    <label>
-                    <input type="radio" name="inline-radio" value="option 2">
-                        <span class="ml-1 yn-button">No</span>
-                    </label>
-
-
-                    <label class="mr-2"><p>Would you like to own a home?</p>
-                        <input type="radio" name="inline-radio" value="option 1"><span class="ml-1">Yes</span>
-                    </label>
-                    <label>
-                        <input type="radio" name="inline-radio" value="option 2"><span class="ml-1">No</span>
-                    </label>
-                    
-
-                    <div>
+                  <label for="large-range" class="mr-2">Do you own a home?</label>
+                  <div class="card card-style bg-theme pb-0">
+                    <div class="content" id="tab-group-1">
+                      <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                          <a href="#" data-active data-bs-toggle="collapse" data-bs-target="#tab-1">Yes</a>
+                          <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-2">No</a>
+                          <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-3">I Wish</a>
+                      </div>
+                      <div data-bs-parent="#tab-group-1" class="collapse" id="tab-1">
+                        <p class="bottom-0 sub-light">
+                          Yes, I own a home.
+                        </p>
+                      </div>
+                      <div data-bs-parent="#tab-group-1" class="collapse" id="tab-2">
+                        <p class="bottom-0 sub-light">
+                          I do not own a home and I do NOT want one.
+                      </p>
+                      </div>
+                      <div data-bs-parent="#tab-group-1" class="collapse" id="tab-3">
+                        <p class="bottom-0 sub-light">
+                          I do not own a home but I want one.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="solid">
+                  <div>
+                    <div class="card card-style">
+                      <div class="content mb-0" style="padding-bottom: 25px;">
                         <label for="large-range" class="mr-2">How young are you?</label>
+                          <p class="sub-light">34</p>
+                          <i class="fa fa-range-icon-1 fa-volume-down color-theme"></i>
+                        <input class="ios-slider" type="range" value="50">
+                      </div>
                     </div>
-                    <p>VALUE</p>
-                        <input id="large-range" type="range" value="50" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">
-                            <label class="mr-2">
-                                <p>Are you currently employed/self-employed/have income?</p>
-                                    <input type="radio" name="inline-radio" value="option 1">
-                                    <span class="ml-1">Yes</span>
-                            </label>
-                            <label class="mr-2">
-                                    <input type="radio" name="inline-radio" value="option 2">
-                                    <span class="ml-1">No</span>
-                            </label>
-
-
-                    <label class="mr-2"><p>Are you happy with your auto insurance?</p>
-                    <input type="radio" name="inline-radio" value="option 1"><span class="ml-1">Yes</span>
-                    </label>
-                    <label>
-                    <input type="radio" name="inline-radio" value="option 2"><span class="ml-1">No</span>
-                    </label>
-                    <div>
-
-
-                    <label class="mr-2">How would you rate your credit score?</label>
-                    </div>
-                        <ul class="grid gap-2 w-full md:grid-cols-4" style="text-align:left;">
-                            <li>
-                            <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required="">
-                                <label for="hosting-small" class="inline-flex justify-between items-center p-3 w-full bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
-                                    <div class="block">
-                                        <div class="w-full text-lg font-semibold">Perfect</div>
-                                        <div class="w-full">Zero Imperfections</div>
-                                    </div>
-                                </label>
-                            </li>
-                    <li>
-                    <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required="">
-                        <label for="hosting-big" class="inline-flex justify-between items-center p-3 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                            <div class="block">
-                                <div class="w-full text-lg font-semibold">Pretty Good</div>
-                                <div class="w-full">Really good but 1-2 blemishes</div>
-                            </div>
-                        </label>
-                    </li>
-                    <li>
-                    <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required="">
-                        <label for="hosting-small" class="inline-flex justify-between items-center p-3 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
-                            <div class="block">
-                                <div class="w-full text-lg font-semibold">Decent</div>
-                                <div class="w-full">Not really good but not bad either</div>
-                            </div>
-                        </label>
-                    </li>
-                    <li>
-                    <input type="radio" id="hosting-small" name="hosting" value="hosting-small" class="hidden peer" required="">
-                        <label for="hosting-small" class="inline-flex justify-between items-center p-3 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
-                        <div class="block">
-                            <div class="w-full text-lg font-semibold">Bad</div>
-                            <div class="w-full">Several imperfections</div>
+                  </div>
+                  <hr class="solid">
+                  <label for="large-range" class="mr-2">Source of income?</label>
+                  <div class="card card-style bg-theme pb-0">
+                    <div class="content" id="tab-group-2">
+                        <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-4">Employment</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-5">Retired</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-6">Self-employed</a>
                         </div>
-                    </label>
-                    </li>
-
-
-                    </ul>
-                    <label class="mr-2"><p>Are you currently employed?</p>
-                        <input type="radio" name="inline-radio" value="option 1"><span class="ml-1">Yes</span>
-                    </label>
-                    <label>
-                    <input type="radio" name="inline-radio" value="option 2"><span class="ml-1">No</span>
-                    </label>
-                    
-
-                    <div>
-                    <label for="large-range" class="mr-2">How much unsecured debt do you have (non-mortgage)?</label>
                     </div>
-                    <p>VALUE</p>
-                    <input id="large-range" type="range" value="50" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">
-                        <label class="mr-2"><p>Are you or have you served in the military?</p>
-                            <input type="radio" name="inline-radio" value="option 1"><span class="ml-1">Yes</span>
-                        </label>
-                        <label>
-                            <input type="radio" name="inline-radio" value="option 2"><span class="ml-1">No</span>
-                        </label>
-
-
-                    <button class="mb-8 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 transition ease-in-out duration-200" type="button">START SAVE-ING</button>
+                  </div>
+                  <hr class="solid">
+                  <label for="large-range" class="mr-2" style="padding-top: 40px">Have you ever served in the military?</label>
+                    <div class="content" id="tab-group-2">
+                        <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-4">Yes</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-5">No</a>
+                        </div>
+                    </div>
+                  <hr class="solid">
+                  <label for="large-range" class="mr-2" style="padding-top: 40px">How would you rate your credit?</label>
+                  <div class="card card-style bg-theme pb-0">
+                    <div class="content" id="tab-group-2">
+                        <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-4">Excellent</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-5">Good</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-6">Fair</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-6">Poor</a>
+                        </div>
+                    </div>
+                  </div>
+                  <hr class="solid">
+                  <label for="large-range" class="mr-2" style="padding-top: 40px">Are you currently employed?</label>
+                  <div class="card card-style bg-theme pb-0">
+                    <div class="content" id="tab-group-2">
+                        <div class="tab-controls tabs-small tabs-rounded" data-highlight="bg-highlight">
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-7">Yes</a>
+                            <a href="#" data-bs-toggle="collapse" data-bs-target="#tab-8">No</a>
+                        </div>
+                    </div>
+                  </div>
+                  <hr class="solid">
+                  <div>
+                    <div class="card card-style">
+                      <div class="content mb-0" style="padding-bottom: 25px;">
+                        <label for="large-range" class="mr-2">Total non-mortgage debt?</label>
+                          <p class="sub-light">$25,000</p>
+                          <i class="fa fa-range-icon-1 fa-volume-down color-theme"></i>
+                        <input class="ios-slider" type="range" value="50">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="mb-8 py-4 px-9 w-full text-white font-semibold border border-indigo-700 rounded-xl shadow-4xl focus:ring focus:ring-indigo-300 bg-indigo-600 transition ease-in-out duration-200" type="button">START SAVE-ING</button>
             
                 </form>
 
@@ -339,6 +359,9 @@
         </div>
       </section>
     </div>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
 </body>
 </html>
 
+body>
